@@ -1,0 +1,105 @@
+/* 案A ヒーロー・イラスト：白基調、見出しブロックの右に大きなメインイラスト */
+:root { --bg: #ffffff; }
+body { background: #fff; }
+section { border: 0; border-radius: 0; padding: 32px 0; margin: 0; border-top: 1px solid var(--line); }
+section.hero { border-top: 0; padding-top: 28px; }
+.hero-a { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 32px; align-items: center; margin-bottom: 22px; }
+.hero-a .kicker { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .16em; color: var(--accent); border-bottom: 2px solid var(--accent); margin-bottom: .6rem; }
+.hero-a h1 { font-size: 2.3rem; line-height: 1.3; margin: 0 0 1rem; letter-spacing: .02em; }
+.hero-a h1 em { font-style: normal; color: var(--accent); display: block; font-size: .62em; letter-spacing: .08em; }
+.hero-a .lead { color: #3b4047; }
+.hero-art { margin: 0; }
+.hero-art img { display: block; width: 100%; height: auto; }
+.facts > div { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 6px; }
+h2 { border-left: 0; padding-left: 0; font-size: 1.5rem; }
+h2::before { content: ""; display: block; width: 36px; height: 4px; background: var(--accent); margin-bottom: 8px; border-radius: 2px; }
+@media (max-width: 760px) {
+  .hero-a { grid-template-columns: 1fr; gap: 8px; }
+  .hero-a h1 { font-size: 1.6rem; }
+  .hero-art { max-width: 520px; margin: 0 auto; }
+}
+@media (max-width: 640px) { section { padding: 22px 0; margin: 0; } }
+
+/* ===== A2 追加（2026-11-01） ===== */
+/* カウントダウン */
+.countdown { margin: 1.1rem 0 0; padding: 12px 16px 14px; border-radius: 8px; background: var(--accent-soft); border-left: 5px solid var(--accent); }
+.countdown p { margin: 0; }
+.cd-label { font-size: .85rem; font-weight: 700; color: var(--accent); letter-spacing: .08em; }
+.cd-body { line-height: 1.25; font-variant-numeric: tabular-nums; }
+.cd-static { font-size: 1.35rem; font-weight: 700; }
+.cd-n { font-size: 2.5rem; font-weight: 700; color: var(--accent); letter-spacing: .01em; }
+.cd-u { font-size: 1rem; font-weight: 700; margin: 0 .5em 0 .15em; }
+.cd-u:last-child { margin-right: 0; }
+.cd-msg { font-size: 1.7rem; font-weight: 700; color: var(--accent); }
+.countdown.is-after { background: #f3f1ee; border-left-color: #9a9590; }
+.countdown.is-after .cd-msg, .countdown.is-after .cd-label { color: var(--ink); }
+
+/* 参加登録の入口（URL未定のため押せない） */
+.register { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 6px; }
+.reg { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; font: inherit; color: var(--muted);
+  background: #f6f5f3; border: 2px dashed #cfcac3; border-radius: 10px; padding: 10px 18px 10px 12px; min-height: 96px; cursor: not-allowed; }
+.reg img { flex: none; width: 76px; height: 76px; object-fit: contain; opacity: .75; }
+.reg-text { display: flex; flex-direction: column; line-height: 1.45; }
+.reg-who { font-size: 1.3rem; font-weight: 700; color: #6c6660; }
+.reg-what { font-size: .9rem; }
+.reg-note { display: inline-block; width: fit-content; margin-top: 4px; font-size: .78rem; font-weight: 700; color: var(--accent); background: #fff; border: 1px solid #e4c9ce; border-radius: 999px; padding: 0 10px; }
+.reg-more { font-size: .88rem; color: var(--muted); margin: 0 0 18px; }
+
+/* 要点カードのイラスト（C 案の置き方） */
+.facts > div { position: relative; padding-right: 96px; min-height: 108px; }
+.facts .ill { position: absolute; right: 8px; bottom: 8px; width: 82px; height: 90px; object-fit: contain; object-position: right bottom; }
+.facts .ill.wide { width: 108px; height: 76px; }
+.facts > div:has(.ill.wide) { padding-right: 120px; }
+
+/* 予稿集・発表一覧のボタンにイラスト */
+.btn.with-ill { flex-direction: row; align-items: center; gap: 14px; padding: 8px 18px 8px 8px; }
+.btn .tile { flex: none; width: 68px; height: 68px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.btn.ghost .tile { background: var(--accent-soft); }
+.btn .tile img { width: 60px; height: 60px; object-fit: contain; }
+.btn .bt { display: flex; flex-direction: column; font-size: 1.05rem; }
+
+/* 発表者の方へ */
+.hero-a.small { grid-template-columns: minmax(0, 1fr) 220px; margin-bottom: 0; }
+.hero-a.small .hero-art img { max-height: 260px; width: auto; margin: 0 auto; }
+.flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: step; }
+.flow li { position: relative; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 6px; padding: 14px 14px 12px; }
+.flow .no { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; margin-bottom: 6px; }
+.flow h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.flow .due { display: block; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.flow p { margin: .4rem 0 0; font-size: .9rem; color: #3b4047; }
+.flow li:not(:last-child)::after { content: ""; position: absolute; right: -11px; top: 50%; width: 10px; height: 10px; border-top: 3px solid var(--accent); border-right: 3px solid var(--accent); transform: translateY(-50%) rotate(45deg); }
+.after-flow { margin: 12px 0 0; background: var(--accent-soft); border-radius: 8px; padding: 8px 14px; font-size: .95rem; }
+.kv { margin: 0; display: grid; grid-template-columns: 11em 1fr; border-top: 1px solid var(--line); }
+.kv dt, .kv dd { margin: 0; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+.kv dt { font-weight: 700; color: var(--accent); }
+.tag { display: inline-block; font-size: .78rem; font-weight: 700; background: #f3f1ee; color: var(--muted); border-radius: 4px; padding: 0 8px; margin-left: .4em; }
+
+@media (max-width: 760px) {
+  .hero-a.small { grid-template-columns: 1fr; }
+  .hero-a.small .hero-art img { max-height: 200px; }
+  .flow { grid-template-columns: 1fr 1fr; }
+  .flow li:nth-child(2)::after { display: none; }
+}
+@media (max-width: 640px) {
+  .cd-n { font-size: 2rem; }
+  .cd-u { font-size: .85rem; margin: 0 .35em 0 .1em; }
+  .cd-msg { font-size: 1.35rem; }
+  .register { grid-template-columns: 1fr; gap: 8px; }
+  .reg { min-height: 78px; padding: 8px 12px 8px 8px; }
+  .reg img { width: 60px; height: 60px; }
+  .reg-who { font-size: 1.15rem; }
+  .facts > div { padding-right: 76px; min-height: 80px; }
+  .facts .ill { width: 62px; height: 68px; bottom: 6px; }
+  .facts .ill.wide { width: 76px; height: 54px; }
+  .facts > div:has(.ill.wide) { padding-right: 88px; }
+  .facts > div { grid-template-columns: 5.4em 1fr; }
+  .facts dt { white-space: nowrap; letter-spacing: .04em; }
+  .btn .tile { width: 56px; height: 56px; }
+  .btn .tile img { width: 50px; height: 50px; }
+  .flow { grid-template-columns: 1fr; gap: 14px; }
+  .flow li::after { display: none; }
+  .flow li:not(:last-child)::after { display: block; right: auto; left: 50%; top: auto; bottom: -13px; transform: translateX(-50%) rotate(135deg); }
+  .kv { grid-template-columns: 1fr; }
+  .kv dt { border-bottom: 0; padding-bottom: 0; }
+}
+@media print { .register, .reg-more { display: none; } }

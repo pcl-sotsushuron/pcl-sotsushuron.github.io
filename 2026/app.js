@@ -1,6 +1,7 @@
 /* 卒修論発表会サイトの小さな動き（外部ライブラリなし。JSが無くても全部読める）
  * 1. 当日だけ、時間割の「いまここ」と冒頭の「いまは〜」を出す（?now=2027-01-23T11:20 で試せる）
  * 2. 発表一覧の絞り込み
+ * 3. 冒頭のカウントダウン（開催前→開催中→終了。?now=2027-01-23T11:20 で試せる）
  */
 (function () {
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -35,6 +36,39 @@
       else box.textContent = '本日のプログラムは終了しました。ご参加ありがとうございました。';
       box.hidden = false;
     }
+  }
+
+  // 3. 開催までのカウントダウン（開始・終了は body の data-event-start / data-event-end。?now= は日本時間として扱う）
+  var cd = document.getElementById('countdown');
+  var t0 = Date.parse(document.body.getAttribute('data-event-start') || '');
+  var t1 = Date.parse(document.body.getAttribute('data-event-end') || '');
+  if (cd && !isNaN(t0) && !isNaN(t1)) {
+    var shift = 0;
+    var mm = /[?&]now=([0-9]{4}-[0-9]{2}-[0-9]{2})T([0-9]{1,2}):([0-9]{2})(?::([0-9]{2}))?/.exec(location.search);
+    if (mm) {
+      var fake = Date.parse(mm[1] + 'T' + pad(+mm[2]) + ':' + mm[3] + ':' + (mm[4] || '00') + '+09:00');
+      if (!isNaN(fake)) shift = fake - Date.now();
+    }
+    var cdLabel = cd.querySelector('.cd-label'), cdBody = cd.querySelector('.cd-body');
+    var when = (cd.querySelector('.cd-static') || cdBody).textContent;
+    var unit = function (n, u) { return '<span class="cd-n">' + n + '</span><span class="cd-u">' + u + '</span>'; };
+    var state = '', timer = null;
+    var tick = function () {
+      var t = Date.now() + shift, st = t < t0 ? 'before' : (t < t1 ? 'during' : 'after');
+      if (st === 'before') {
+        var s = Math.floor((t0 - t) / 1000);
+        var d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), mi = Math.floor(s % 3600 / 60), se = s % 60;
+        cdBody.innerHTML = unit(d, '日') + unit(pad(h), '時間') + unit(pad(mi), '分') + unit(pad(se), '秒');
+      }
+      if (st === state) return;
+      state = st;
+      cd.className = 'countdown is-' + st;
+      if (st === 'before') cdLabel.textContent = '開催まであと';
+      else if (st === 'during') { cdLabel.textContent = when; cdBody.innerHTML = '<span class="cd-msg">ただいま開催中</span>'; }
+      else { cdLabel.textContent = when; cdBody.innerHTML = '<span class="cd-msg">本年度の発表会は終了しました</span>'; if (timer) clearInterval(timer); }
+    };
+    tick();
+    if (state !== 'after') timer = setInterval(tick, 1000);
   }
 
   var q = document.getElementById('q');

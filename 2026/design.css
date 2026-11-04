@@ -201,3 +201,5 @@ h2, h3 { font-weight: 800; letter-spacing: .04em; }
 .entry-guide2 small { font-family: "Noto Sans JP", sans-serif; font-weight: 400; }
 .entry-guide2 .arr { font-size: 1.3rem; }
 @media (max-width: 640px) { .entry2 { grid-template-columns: 1fr; } .ehead img { width: 56px; height: 56px; } .ehead h2 { font-size: 1.25rem; } .ebtn-full { flex: none; } }
+
+.entry-guide2 .dl { display: block; font-size: 1.3rem; font-weight: 700; color: var(--accent); margin: 4px 0 0; letter-spacing: .02em; }

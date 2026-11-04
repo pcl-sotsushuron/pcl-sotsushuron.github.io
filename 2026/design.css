@@ -163,7 +163,7 @@ h2::before { content: ""; display: block; width: 36px; height: 4px; background: 
   .ms-label span::before { content: "　"; }
   .sched-today { left: 64px; top: calc(var(--t) * 1%); }
   .sched-today .pin { top: -7px; left: -26px; transform: rotate(45deg); }
-  .sched-today .tag { left: 24px; top: -10px; transform: none; }
+  .sched-today .tag { left: 24px; top: 14px; transform: none; }
   .sched-bands { left: 0; top: 0; bottom: 0; width: 56px; right: auto; }
   .band { width: 18px; top: calc(var(--a) * 1%); height: calc((var(--b) - var(--a)) * 1%); padding: 6px 0 0; writing-mode: vertical-rl; line-height: 18px; font-size: .7rem; letter-spacing: -.02em; overflow: hidden; }
   .band-join { left: 32px; } .band-pres { left: 8px; }

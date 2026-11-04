@@ -31,11 +31,33 @@
     <figure class="hero-art"><img src="main.webp" width="816" height="572" alt="ポスターの前で学生が発表し、学生・先生・社会人が聞いている様子のイラスト"></figure>
   </div>
   <div id="now" class="now" hidden></div>
-  <div class="register">
-    <button type="button" class="reg" disabled><img src="listeners_transparent.webp" alt=""><span class="reg-text"><span class="reg-who">参加予定の方</span><span class="reg-what">参加登録フォーム</span><small class="reg-note">受付開始は11月下旬の予定</small></span></button>
-    <button type="button" class="reg" disabled><img src="presenter_transparent.webp" alt=""><span class="reg-text"><span class="reg-who">発表予定の方</span><span class="reg-what">発表者の参加登録フォーム</span><small class="reg-note">受付開始は11月下旬の予定</small></span></button>
+  <div class="entry">
+    <div class="entry-join">
+      <button type="button" class="reg" disabled><img src="listeners_transparent.webp" alt=""><span class="reg-text"><span class="reg-who">参加予定の方</span><span class="reg-what">参加登録フォーム</span><small class="reg-note">受付開始は11月下旬の予定</small></span></button>
+    </div>
+    <div class="entry-pres">
+      <a class="btn ghost with-ill entry-guide" href="presenters.html"><span class="tile"><img src="program_list_transparent.webp" alt=""></span><span class="bt"><span class="g-who">発表予定の方</span>予稿提出ガイド<small>まずはこちらをご確認下さい</small></span></a>
+      <button type="button" class="reg reg-pres" disabled><img src="presenter_transparent.webp" alt=""><span class="reg-text"><span class="reg-who">発表者参加登録</span><span class="reg-what">発表者の参加登録フォーム</span><small class="reg-note">受付開始は11月下旬の予定</small></span></button>
+    </div>
   </div>
-  <p class="reg-more">発表される方は、締切と提出物を <a href="presenters.html">発表者の方へ</a> で確認してください。</p>
+  <div class="sched-box" id="schedule">
+    <h2 class="sched-h">スケジュール</h2>
+    <div class="sched" data-start="2026-11-01" data-end="2027-01-23">
+      <div class="sched-line"><span class="sched-past"></span></div>
+      <ol class="sched-ms">
+      <li class="ms ms-open" style="--p:28.9"><span class="ms-dot"></span><span class="ms-label"><b>受付開始</b><span>11月下旬（予定）</span></span></li>
+      <li class="ms ms-join" style="--p:48.2"><span class="ms-dot"></span><span class="ms-label"><b>参加登録締切</b><span>12月11日（金）</span></span></li>
+      <li class="ms ms-pres" style="--p:85.5"><span class="ms-dot"></span><span class="ms-label"><b>予稿提出締切</b><span>1月11日（月）</span></span></li>
+      <li class="ms ms-event" style="--p:100.0"><span class="ms-dot"></span><span class="ms-label"><b>開催日</b><span>1月23日（土）</span></span></li>
+      </ol>
+      <div class="sched-today" hidden><span class="pin"></span><span class="tag"></span></div>
+      <div class="sched-bands">
+        <span class="band band-join" style="--a:28.9;--b:48.2">参加登録 受付期間</span>
+        <span class="band band-pres" style="--a:28.9;--b:85.5">予稿の提出期間</span>
+      </div>
+    </div>
+    <p class="sched-note">受付開始の日付は予定です。予稿の差し替えは1月15日（金）まで。</p>
+  </div>
   <dl class="facts">
     <div><img class="ill" src="calendar_transparent.webp" alt=""><dt>日時</dt><dd><strong>2027年1月23日（土）</strong><span>時間は決まり次第掲載</span></dd></div>
     <div><img class="ill" src="venue_transparent.webp" alt=""><dt>会場</dt><dd><strong>早稲田大学 喜久井町キャンパス 40号館（GCS）</strong><span>1階 102 <a href="#access">アクセス</a></span></dd></div>

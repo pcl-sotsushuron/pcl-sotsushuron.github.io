@@ -91,4 +91,23 @@
     };
     q.addEventListener('input', run);
   }
+
+  // 4. スケジュールの線に「今日」を出す（?now=2026-12-01T09:00 で試せる）
+  var sc = document.querySelector('.sched');
+  if (sc) {
+    var d0 = Date.parse(sc.getAttribute('data-start') + 'T00:00:00+09:00'), d1 = Date.parse(sc.getAttribute('data-end') + 'T00:00:00+09:00');
+    var tn = Date.now(), qq = /[?&]now=([0-9]{4}-[0-9]{2}-[0-9]{2})/.exec(location.search);
+    if (qq) tn = Date.parse(qq[1] + 'T12:00:00+09:00');
+    var jst = new Date(tn + 9 * 3600000), dayStart = Date.parse(jst.toISOString().slice(0, 10) + 'T00:00:00+09:00');
+    if (!isNaN(d0) && !isNaN(d1) && dayStart >= d0 && dayStart <= d1) {
+      var pc = (dayStart - d0) / (d1 - d0) * 100;
+      var td = sc.querySelector('.sched-today');
+      td.style.setProperty('--t', pc.toFixed(1));
+      td.querySelector('.tag').textContent = '今日 ' + (jst.getUTCMonth() + 1) + '月' + jst.getUTCDate() + '日';
+      td.hidden = false;
+      var past = sc.querySelector('.sched-past');
+      if (window.matchMedia('(max-width: 640px)').matches) past.style.height = pc.toFixed(1) + '%'; else past.style.width = pc.toFixed(1) + '%';
+      window.matchMedia('(max-width: 640px)').addEventListener('change', function (e) { past.style.width = e.matches ? '' : pc.toFixed(1) + '%'; past.style.height = e.matches ? pc.toFixed(1) + '%' : ''; });
+    }
+  }
 })();

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="design.css">
 </head>
-<body data-event-date="2027-01-23" data-event-start="2027-01-23T10:30:00+09:00" data-event-end="2027-01-23T18:30:00+09:00">
+<body data-event-date="2027-01-23" data-event-start="2027-01-23T10:30:00+09:00" data-event-end="2027-01-23T18:45:00+09:00">
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html">2026年度 卒業論文・修士論文発表会</a>
@@ -25,7 +25,7 @@
       <span class="kicker">二〇二六年度</span>
       <h1>卒業論文・修士論文<br>発表会</h1>
       <p class="en">Bachelor’s and Master’s Thesis Poster Session 2026</p>
-      <p class="meta"><b>2027年1月23日（土）</b><br>早稲田大学 喜久井町キャンパス 40号館（GCS）1階 102</p>
+      <p class="meta"><b>2027年1月23日（土）</b> 10:30〜18:45<br>早稲田大学 喜久井町キャンパス 40号館（GCS）1階 102</p>
       <p class="labs">小林・小川・及川・菊池・池永・松居 研究室 合同</p>
       <div id="countdown" class="countdown" aria-live="off">
         <p class="cd-label">開催日時</p>
@@ -44,7 +44,7 @@
       <button type="button" class="reg reg-pres" disabled><img src="presenter_transparent.webp" alt=""><span class="reg-text"><span class="reg-who">発表者参加登録</span><span class="reg-what">発表者の参加登録フォーム</span><small class="reg-note">受付開始は11月下旬の予定</small></span></button>
     </div>
   </div>
-  <div class="sched-box" id="schedule">
+  <div class="sched-box" id="dates">
     <h2 class="sched-h">スケジュール</h2>
     <div class="sched" data-start="2026-11-01" data-end="2027-01-23">
       <div class="sched-line"><span class="sched-past"></span></div>
@@ -63,7 +63,7 @@
     <p class="sched-note">受付開始の日付は予定です。予稿の差し替えは1月15日（金）まで。</p>
   </div>
   <dl class="facts">
-    <div><img class="ill" src="calendar_transparent.webp" alt=""><dt>日時</dt><dd><strong>2027年1月23日（土）</strong><span>時間は決まり次第掲載</span></dd></div>
+    <div><img class="ill" src="calendar_transparent.webp" alt=""><dt>日時</dt><dd><strong>2027年1月23日（土）</strong><span>10:30〜18:45（10:15 受付開始）</span></dd></div>
     <div><img class="ill" src="venue_transparent.webp" alt=""><dt>会場</dt><dd><strong>早稲田大学 喜久井町キャンパス 40号館（GCS）</strong><span>1階 102 <a href="#access">アクセス</a></span></dd></div>
     <div><img class="ill wide" src="main_transparent.webp" alt=""><dt>プログラム</dt><dd><strong>ポスター発表</strong><span>6研究室・発表一覧は決まり次第掲載</span></dd></div>
   </dl>
@@ -73,7 +73,20 @@
 
 <section id="schedule">
   <h2>当日の時間割</h2>
-  <p class="muted">決まり次第掲載します。</p>
+  <ol class="timetable"><li data-start="10:15" data-end="10:30"><div class="time">10:15<span class="dash">–</span>10:30</div><div class="what">受付開始<div class="note">会場（40号館 1階 102）で受け付けます</div></div></li><li data-start="10:30" data-end="10:40"><div class="time">10:30<span class="dash">–</span>10:40</div><div class="what">開会の辞</div></li><li class="sess" data-start="10:40" data-end="11:40"><div class="time">10:40<span class="dash">–</span>11:40</div><div class="what">ポスターセッション1</div></li><li data-start="11:40" data-end="13:00"><div class="time">11:40<span class="dash">–</span>13:00</div><div class="what">昼休憩</div></li><li class="sess" data-start="13:00" data-end="14:00"><div class="time">13:00<span class="dash">–</span>14:00</div><div class="what">ポスターセッション2</div></li><li data-start="14:00" data-end="14:15"><div class="time">14:00<span class="dash">–</span>14:15</div><div class="what">休憩</div></li><li class="sess" data-start="14:15" data-end="15:15"><div class="time">14:15<span class="dash">–</span>15:15</div><div class="what">ポスターセッション3</div></li><li data-start="15:15" data-end="15:30"><div class="time">15:15<span class="dash">–</span>15:30</div><div class="what">休憩</div></li><li class="sess" data-start="15:30" data-end="16:30"><div class="time">15:30<span class="dash">–</span>16:30</div><div class="what">ポスターセッション4</div></li><li data-start="16:30" data-end="17:15"><div class="time">16:30<span class="dash">–</span>17:15</div><div class="what">投票・懇親会準備</div></li><li data-start="17:15" data-end="18:45"><div class="time">17:15<span class="dash">–</span>18:45</div><div class="what">懇親会<div class="note">同じ会場（40号館 1階 102）。表彰を行います</div></div></li></ol>
+  <p class="muted">時刻は昨年度と同じ予定です。各セッションの発表者は、決まり次第「発表一覧」に掲載します。</p>
+</section>
+
+<section id="guests">
+  <h2>来賓・OB・OG・教職員の方へ</h2>
+  <dl class="kv">
+    <dt>参加登録</dt><dd>来賓・OB・OG・教職員・研究員の方も、参加登録フォームからご登録ください（受付開始は11月下旬の予定）。締切は追ってお知らせします。</dd>
+    <dt>昼食</dt><dd>昼食の要否は参加登録フォームで伺います。ご登録のない方の昼食はご用意できませんので、早めのご登録をお願いします。</dd>
+    <dt>教職員・研究員の方</dt><dd>ご欠席の場合もご登録ください。招聘研究員・研究員の方も登録の対象です。予稿集に載せる写真と紹介文（約200字）のご提出をお願いします。</dd>
+    <dt>懇親会</dt><dd>17:15〜18:45、同じ会場（40号館 1階 102）で行います。</dd>
+    <dt>賞と表彰</dt><dd>学生の投票による最優秀賞・優秀賞と、OB・OG による奨励賞があります。表彰は懇親会で行います。奨励賞の詳細は追ってお知らせします。</dd>
+    <dt>予稿集</dt><dd>参加登録した方にだけ、メールでお知らせします。</dd>
+  </dl>
 </section>
 
 <section id="access">

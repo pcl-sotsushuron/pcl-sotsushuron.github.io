@@ -203,3 +203,7 @@ h2, h3 { font-weight: 800; letter-spacing: .04em; }
 @media (max-width: 640px) { .entry2 { grid-template-columns: 1fr; } .ehead img { width: 56px; height: 56px; } .ehead h2 { font-size: 1.25rem; } .ebtn-full { flex: none; } }
 
 .entry-guide2 .dl { display: block; font-size: 1.3rem; font-weight: 700; color: var(--accent); margin: 4px 0 0; letter-spacing: .02em; }
+
+.flow .form-btn { display: inline-block; margin-top: 6px; background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 700; text-decoration: none; }
+.flow .form-btn:hover, .flow .form-btn:focus-visible { filter: brightness(1.1); }
+.fact-link strong a { color: var(--accent); }

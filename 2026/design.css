@@ -217,3 +217,7 @@ h2, h3 { font-weight: 800; letter-spacing: .04em; }
 .btn:active, .entry-guide2:active, .flow .form-btn:active { transform: translateY(3px); box-shadow: 0 0 0 transparent; }
 .btn:focus-visible, .entry-guide2:focus-visible, .flow .form-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .btn, .entry-guide2, .flow .form-btn { transition: none; } }
+
+/* 発表までの流れの各段階のイラスト（2026-11-05） */
+.flow .step-ill { display: block; width: 100%; height: 120px; object-fit: contain; margin: 0 0 6px; }
+@media (max-width: 640px) { .flow li { display: grid; grid-template-columns: 84px 1fr; column-gap: 12px; } .flow .step-ill { grid-row: 1 / span 5; height: 84px; width: 84px; margin: 0; align-self: start; } }

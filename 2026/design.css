@@ -207,3 +207,13 @@ h2, h3 { font-weight: 800; letter-spacing: .04em; }
 .flow .form-btn { display: inline-block; margin-top: 6px; background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 700; text-decoration: none; }
 .flow .form-btn:hover, .flow .form-btn:focus-visible { filter: brightness(1.1); }
 .fact-link strong a { color: var(--accent); }
+
+/* ---- 押した感（2026-11-05）：ボタンに厚みを付け、押すと沈む ---- */
+.btn, .entry-guide2, .flow .form-btn { transition: transform .08s ease, box-shadow .08s ease, background-color .15s ease; }
+.entry-guide2 { box-shadow: 0 3px 0 #d9b3ba; }
+.entry-guide2:hover { background: var(--accent-soft); }
+.btn:not(.entry-guide2), .flow .form-btn { box-shadow: 0 3px 0 #5f1020; }
+.btn.ghost:not(.entry-guide2) { box-shadow: 0 3px 0 #d9b3ba; }
+.btn:active, .entry-guide2:active, .flow .form-btn:active { transform: translateY(3px); box-shadow: 0 0 0 transparent; }
+.btn:focus-visible, .entry-guide2:focus-visible, .flow .form-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .btn, .entry-guide2, .flow .form-btn { transition: none; } }

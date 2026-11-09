@@ -26,7 +26,13 @@
   <!-- 道順 -->
   <path d="M214 202 H284" fill="none" stroke="#9e1b32" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
   <path d="M280 195 L292 202 L280 209" fill="none" stroke="#9e1b32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="430" y="234" font-size="13" fill="#9e1b32">徒歩1分</text>
+  <text x="292" y="298" font-size="13" fill="#9e1b32">2番出口から徒歩1分</text>
+  <!-- エレベーター専用口（中野行きホームの中ほど→40号館の東隣の建物1階） -->
+  <rect x="420" y="190" width="10" height="96" fill="#d9d4cc"/>
+  <rect x="436" y="198" width="34" height="22" rx="3" fill="#0079c2"/>
+  <text x="453" y="214" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">EV</text>
+  <text x="478" y="210" font-size="12" fill="#0079c2" font-weight="700">エレベーター専用口</text>
+  <text x="478" y="226" font-size="11" fill="#0079c2">（中野行きホームから）</text>
   <!-- 方位 -->
   <g transform="translate(600 40)">
     <path d="M0 -18 L8 10 L0 4 L-8 10 Z" fill="#4a453e"/>

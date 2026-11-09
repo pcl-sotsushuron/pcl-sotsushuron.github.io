@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+  <title>早稲田駅2番出口から40号館までの地図</title>
+  <rect width="640" height="400" fill="#fbfaf7"/>
+  <!-- 喜久井町キャンパス -->
+  <path d="M292 214 H500 V372 H262 Z" fill="#efe6d6"/>
+  <text x="400" y="330" font-size="15" fill="#7a6a4f" text-anchor="middle">喜久井町キャンパス</text>
+  <!-- 夏目坂通り -->
+  <path d="M232 60 L246 172 L196 400" fill="none" stroke="#d9d4cc" stroke-width="24"/>
+  <text x="0" y="0" font-size="13" fill="#6b655c" transform="translate(206 330) rotate(-77)">夏目坂通り</text>
+  <!-- 早稲田通り -->
+  <rect x="0" y="152" width="640" height="38" fill="#d9d4cc"/>
+  <text x="560" y="176" font-size="14" fill="#4a453e" text-anchor="middle">早稲田通り</text>
+  <text x="14" y="142" font-size="13" fill="#6b655c">← 高田馬場</text>
+  <text x="626" y="142" font-size="13" fill="#6b655c" text-anchor="end">神楽坂 →</text>
+  <!-- 東西線 早稲田駅（地下） -->
+  <rect x="110" y="163" width="360" height="16" rx="3" fill="#ffffff" stroke="#0079c2" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="340" y="118" font-size="14" fill="#0079c2" text-anchor="middle" font-weight="700">東京メトロ東西線 早稲田駅（地下）</text>
+  <!-- 40号館 -->
+  <rect x="292" y="214" width="120" height="62" fill="#9e1b32"/>
+  <text x="352" y="242" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="700">40号館</text>
+  <text x="352" y="264" font-size="12" fill="#ffffff" text-anchor="middle">会場 1階 102</text>
+  <!-- 2番出口 -->
+  <circle cx="198" cy="208" r="13" fill="#0079c2"/>
+  <text x="198" y="213" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+  <text x="182" y="238" font-size="13" fill="#0079c2" text-anchor="end" font-weight="700">2番出口</text>
+  <!-- 道順 -->
+  <path d="M214 202 H284" fill="none" stroke="#9e1b32" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+  <path d="M280 195 L292 202 L280 209" fill="none" stroke="#9e1b32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="430" y="234" font-size="13" fill="#9e1b32">徒歩1分</text>
+  <!-- 方位 -->
+  <g transform="translate(600 40)">
+    <path d="M0 -18 L8 10 L0 4 L-8 10 Z" fill="#4a453e"/>
+    <text x="0" y="28" font-size="12" fill="#4a453e" text-anchor="middle">北</text>
+  </g>
+  <text x="626" y="392" font-size="10" fill="#8a847a" text-anchor="end">略図（縮尺は正確ではありません）</text>
+</svg>
